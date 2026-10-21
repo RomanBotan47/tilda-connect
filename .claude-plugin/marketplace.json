@@ -1,0 +1,5 @@
+{
+  "name": "tilda-connect-marketplace",
+  "owner": {"name": "Роман Лазарев · Автомато"},
+  "plugins": [{"name": "tilda-connect", "source": "./plugins/tilda-connect", "description": "Официальный MCP Tilda с личным ключом в хранилище ОС"}]
+}

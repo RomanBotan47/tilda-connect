@@ -1,0 +1,37 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "tilda-connect",
+  "version": "1.1.0",
+  "description": "Подключение личной Tilda к Codex и Claude через официальный MCP с ключом в хранилище ОС.",
+  "author": {
+    "name": "Роман Лазарев · Автомато"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tilda",
+    "mcp",
+    "website",
+    "catalog",
+    "cms"
+  ],
+  "extensions": {
+    "com.openai": {
+      "onboardingSkill": "./skills/setup/SKILL.md",
+      "interface": {
+        "displayName": "Tilda Connect",
+        "shortDescription": "Ваша Tilda в Codex с личным ключом в хранилище ОС",
+        "longDescription": "Работайте с инструментами официального MCP Tilda. Каждый пользователь подключает свой ключ локально. Набор действий определяется правами ключа в Tilda.",
+        "developerName": "Роман Лазарев · Автомато",
+        "category": "Productivity",
+        "capabilities": [
+          "Read",
+          "Write"
+        ],
+        "defaultPrompt": [
+          "Проверь подключение Tilda и покажи доступные возможности",
+          "Покажи проекты и страницы моей Tilda"
+        ]
+      }
+    }
+  }
+}

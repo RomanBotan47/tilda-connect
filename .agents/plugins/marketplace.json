@@ -1,0 +1,10 @@
+{
+  "name": "tilda-connect-marketplace",
+  "interface": {"displayName": "Tilda Connect · Автомато"},
+  "plugins": [{
+    "name": "tilda-connect",
+    "source": {"source": "local", "path": "./plugins/tilda-connect"},
+    "policy": {"installation": "AVAILABLE", "authentication": "ON_USE"},
+    "category": "Productivity"
+  }]
+}

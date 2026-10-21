@@ -1,0 +1,19 @@
+{
+  "name": "tilda-connect",
+  "version": "1.1.0",
+  "description": "Официальный MCP Tilda с личным ключом в хранилище ОС.",
+  "author": {
+    "name": "Роман Лазарев · Автомато"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Tilda Connect",
+    "shortDescription": "Ваша Tilda в Codex",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="tilda-setup" content="__CSRF__">
+  <title>Подключить Tilda</title>
+  <link rel="stylesheet" href="/wizard.css">
+  <script src="/wizard.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><span class="brand"><span class="brand-mark" aria-hidden="true">t</span>Tilda Connect</span><span class="local">На вашем компьютере</span></header>
+    <section id="setup">
+      <p class="eyebrow">АВТОМАТО · ПОДКЛЮЧЕНИЕ</p>
+      <h1>Подключите Tilda</h1>
+      <p class="intro">Выберите приложение и вставьте свой ключ.</p>
+      <form id="connect-form">
+        <fieldset><legend><span class="number">1</span> Куда подключить?</legend>
+          <div class="choices">
+            <label><input type="radio" name="client" value="codex" checked><span><strong>Codex</strong><small>Приложение OpenAI</small></span><span class="radio" aria-hidden="true"></span></label>
+            <label><input type="radio" name="client" value="claude-desktop"><span><strong>Claude</strong><small>Приложение на компьютере</small></span><span class="radio" aria-hidden="true"></span></label>
+            <label><input type="radio" name="client" value="claude-code"><span><strong>Claude Code</strong><small>Для работы с кодом</small></span><span class="radio" aria-hidden="true"></span></label>
+          </div>
+        </fieldset>
+        <div class="key-section">
+          <label class="key-label" for="token"><span class="number">2</span> Ключ из Tilda</label>
+          <div id="saved" hidden><p>Ваш ключ уже сохранён на этом компьютере.</p><button type="button" class="text-button" id="replace-key">Использовать другой ключ</button></div>
+          <div id="new-key"><input id="token" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Вставьте ключ сюда" maxlength="4096" required aria-describedby="key-help"><p id="key-help">Tilda → Профиль → MCP-сервер → Новый ключ</p></div>
+          <details><summary>Где взять ключ?</summary><p>Откройте профиль Tilda, выберите «MCP-сервер» и нажмите «Новый ключ». Укажите свой проект и нужные действия. Скопируйте ключ и вставьте сюда.</p><a href="https://help-ru.tilda.cc/mcp" target="_blank" rel="noopener noreferrer">Открыть инструкцию Tilda ↗</a><p>Подключение доступно на тарифах Personal и Business.</p></details>
+        </div>
+        <p id="error" class="error" role="alert" hidden></p>
+        <button class="primary" id="connect" type="submit"><span>Подключить Tilda</span><span aria-hidden="true">→</span></button>
+        <p id="progress" class="progress" role="status" hidden>Проверяем ключ и настраиваем приложение…</p>
+        <p class="privacy"><svg aria-hidden="true" viewBox="0 0 16 18"><path d="M4 7V5a4 4 0 0 1 8 0v2M2 7h12v9H2z" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Ключ сохранится в защищённом хранилище вашего компьютера.</p>
+      </form>
+    </section>
+    <section id="success" hidden tabindex="-1">
+      <div class="success-mark" aria-hidden="true">✓</div>
+      <p class="eyebrow">НАСТРОЙКИ СОХРАНЕНЫ</p>
+      <h1>Настройка готова.</h1>
+      <p class="intro" id="restart"></p>
+      <div class="prompt"><p>Напишите в новом чате:</p><p>«Покажи мои проекты в Tilda»</p><button id="copy-prompt" class="text-button" type="button">Скопировать фразу</button></div>
+      <button class="primary" id="finish" type="button"><span>Готово</span><span aria-hidden="true">✓</span></button>
+      <p class="privacy">Эту вкладку можно закрыть.</p>
+    </section>
+    <footer><span>Автомато</span><span>Подключение напрямую к Tilda</span></footer>
+  </main>
+</body>
+</html>

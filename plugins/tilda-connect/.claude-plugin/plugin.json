@@ -1,0 +1,9 @@
+{
+  "name": "tilda-connect",
+  "version": "1.1.0",
+  "description": "Официальный MCP Tilda с личным ключом в хранилище ОС.",
+  "author": {
+    "name": "Роман Лазарев · Автомато"
+  },
+  "license": "MIT"
+}
